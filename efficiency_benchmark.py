@@ -20,7 +20,7 @@ warnings.filterwarnings('ignore')
 
 seed = 10
 device = torch.device(
-    "cuda:3") if torch.cuda.is_available() else torch.device("cpu")
+    "cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 
 def load_AllenVISp():
     VISp_adata = sc.read(
