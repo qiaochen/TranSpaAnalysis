@@ -1,15 +1,15 @@
 # TranSpaAnalysis
 Analysis notebooks reported in Manuscript:
 
-For replication:
+For replication please follow the following steps:
 
-## 0. Preparation:
+## 0. Preparation
 
 ### 0.1 Install required packages
 
 - Please refer to repo [Transpa](https://github.com/qiaochen/tranSpa/tree/main) for installing tranSpa,
 - We have SpaGE included in this repo, but [Tangram](https://github.com/broadinstitute/Tangram), [stPlus](https://github.com/xy-chen16/stPlus), and [SparkX](https://xzhoulab.github.io/SPARK/04_installation/) should be installed following their software documents:
-- Note that SparkX is an R package, should make sure you change the line `!source /home/cqiao/.bashrc; ~/R/bin/Rscript sparkX.r intestine5fold` to your working R environment when executing the four notebooks:
+- Note that SparkX is an R package, make sure you change the R software bin path in line `!source /home/cqiao/.bashrc; ~/R/bin/Rscript sparkX.r intestine5fold` to your working R environment when executing the following notebooks:
     - `imputation_base_intestine.ipynb`
     - `imputation_base_melanoma.ipynb`
     - `imputation_base_breastcancer.ipynb`
@@ -39,7 +39,7 @@ RootFolder
     |-- output            
 ```
 
->It is also possible to have a quick inspection for the reported plots in our manuscript by downloading [output.tar.gz](https://zenodo.org/record/8172197/files/output.tar.gz?download=1) and extracting it to specified location.
+>It is also possible to have a quick inspection for the reported plots in our manuscript with our generated [output.tar.gz](https://zenodo.org/record/8172197/files/output.tar.gz?download=1) and extracting it to the specified location.
 
 ### 0.3 Run preprocessing
 
@@ -77,7 +77,7 @@ sh ./eval.sh
 - `seqfish_exploration.ipynb`
 
 ### 1.6 Executing imputation & downstream analysis on Visium datasets
-Please remember to change the line `!source /home/cqiao/.bashrc; ~/R/bin/Rscript sparkX.r intestine5fold` to your working R environment.
+Please remember to change the R bin path in the line `!source /home/cqiao/.bashrc; ~/R/bin/Rscript sparkX.r intestine5fold` to your working R environment.
 
 - `imputation_base_intestine.ipynb`
 - `imputation_base_melanoma.ipynb`
