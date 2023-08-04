@@ -40,7 +40,7 @@ RootFolder
     |-- output            
 ```
 
->It is also possible to have a quick inspection for the reported plots in our manuscript with our generated [output.tar.gz](https://zenodo.org/record/8172197/files/output.tar.gz?download=1) and extracting it to the specified location.
+>It is also possible to have a quick inspection for the reported plots by running plotting notebooks with our generated data, [output.tar.gz](https://zenodo.org/record/8172197/files/output.tar.gz?download=1), please extract it to the specified location above.
 
 ### 0.3 Run preprocessing
 
