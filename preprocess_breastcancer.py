@@ -9,6 +9,7 @@ import spatialdm as sdm
 
 from transpa.util import leiden_cluster
 
+os.environ['PYENSEMBL_CACHE_DIR'] = './'
 OUTROOT = "../../output/preprocessed_dataset"
 dataset_path = "breastcancer.pkl"
 spec = "human"
@@ -17,7 +18,7 @@ ST_name = "breastcancer5fold"
 def validate_genes():
     from pyensembl import EnsemblRelease
 
-    # release 77 uses human reference genome GRCh38
+    # release 108 uses human reference genome GRCh38
     data = EnsemblRelease(108)
     res = []
     valid_ids = []
@@ -30,6 +31,7 @@ def validate_genes():
             res.append(name)
             valid_ids.append(gid)
         except Exception as e:
+            print(e)
             counter += 1
             
     print(f"Missed genes {counter}")    
@@ -39,7 +41,7 @@ if __name__ == "__main__":
     rna_adata = sc.read_mtx("../../data/scRNAseq/BreastCancer/matrix.mtx.gz").T
     rna_adata.var_names = pd.read_csv("../../data/scRNAseq/BreastCancer/features.tsv", header=None).iloc[:, 0].values
     rna_adata.obs_names = pd.read_csv("../../data/scRNAseq/BreastCancer/barcodes.tsv", header=None).iloc[:, 0].values
-    
+    print(rna_adata)
     gene_names, valid_ids = validate_genes()
     rna_adata = rna_adata[:, valid_ids].copy()
     rna_adata.var_names = gene_names

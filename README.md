@@ -50,7 +50,19 @@ Run preprocessing for all the ST and SC datasets, so that our codes and notebook
 sh ./preprocess_datasets.sh
 ```
 
-This will run all the `preprocess_*.py` scripts. The preprocessed data would be stored in `../../output/preprocessed_dataset` (relative location based on the default project organization shown above)
+This will run all the `preprocess_*.py` scripts. The preprocessed data would be stored in `../../output/preprocessed_dataset` (relative location based on the default project organization shown above).
+
+>* The intestine ST data seemed to be corrupted, please find the re-uploaded version [intest_ST.tar.gz](https://zenodo.org/record/8214466/files/intest_ST.tar.gz?download=1) and extract it to replace `../../data/ST/intest/A1.h5ad`
+>* Note for the human breastcancer dataset processed by `preprocess_breastcancer.py`, because the genes of reference single cell data are annotated with gene ids, to convert the ids back to gene names, [pyensemble](https://github.com/openvax/pyensembl) is required and GRCh38 version 108 should be downloaded before executing the preprocessing script. Below is the code to download GRCh38 v108:
+```
+pip install pyensembl
+export PYENSEMBL_CACHE_DIR=./
+pyensembl install --release 108 --species human
+```
+This will download GRCh38 v108 to `./pyensembl`. Then, in `preprocess_breastcancer.py` we need to set pyensembl cache directory to `./`  under which the downloaded data locate. This is achieved via the line `os.environ['PYENSEMBL_CACHE_DIR'] = './'` in `preprocess_breastcancer.py`
+
+
+> __For easier access__, users can use our preprocessed results uploaded to [output.tar.gz](https://zenodo.org/record/8172197/files/output.tar.gz?download=1)
 
 ## 1. Run Experiments:
 
