@@ -14,6 +14,7 @@ For replication please follow the following steps:
     - `imputation_base_melanoma.ipynb`
     - `imputation_base_breastcancer.ipynb`
     - `imputation_base_mouseliver.ipynb`
+- [scvelo](https://scvelo.readthedocs.io/en/stable/installation/) is required for RNA Velocity analysis
 
 ### 0.2 Get raw data
 
@@ -88,6 +89,8 @@ Please remember to change the R bin path in the line `!source /home/cqiao/.bashr
 - `visium_eval.ipynb`
 
 ### 1.8 ST RNA velocity estimation:
+Please install [scvelo](https://scvelo.readthedocs.io/en/stable/installation/) before running the notebooks.
+
 - `transvelo_chickenheart.ipynb`
 - `transvelo_mousebrain.ipynb`
 
