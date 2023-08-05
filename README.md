@@ -1,5 +1,6 @@
 # TranSpaAnalysis
-Analysis notebooks reported in Manuscript:
+Analysis notebooks reported in Manuscript: 
+>[Reliable imputation of spatial transcriptome with uncertainty estimation and spatial regularization](https://www.biorxiv.org/content/10.1101/2023.01.20.524992v2)
 
 For replication please follow the following steps:
 
