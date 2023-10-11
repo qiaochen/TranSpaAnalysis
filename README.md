@@ -19,8 +19,8 @@ For replication please follow the following steps:
 
 ### 0.2 Get raw data
 
-- All the ST and SC datasets can be downloaded from [Zenodo](https://zenodo.org/record/8172197); 
-- the raw data are compressed as [data.tar.gz](https://zenodo.org/record/8172197/files/data.tar.gz?download=1)
+- All the ST and SC datasets can be downloaded from [Zenodo](https://zenodo.org/record/8214466); 
+- the raw data are compressed as [data.tar.gz](https://zenodo.org/record/8214466/files/data.tar.gz?download=1)
 
 after downloading `data.tar.gz` (may take a while), extract files using the following command (linux):
 
@@ -41,7 +41,7 @@ RootFolder
     |-- output            
 ```
 
->It is also possible to have a quick inspection for the reported plots by running plotting notebooks with our generated data, [output.tar.gz](https://zenodo.org/record/8172197/files/output.tar.gz?download=1), please extract it to the specified location above.
+>It is also possible to have a quick inspection for the reported plots by running plotting notebooks with our generated data, [output.tar.gz](https://zenodo.org/record/8214466/files/output.tar.gz?download=1), please extract it to the specified location above.
 
 ### 0.3 Run preprocessing
 
@@ -63,7 +63,7 @@ pyensembl install --release 108 --species human
 This will download GRCh38 v108 to `./pyensembl`. Then, in `preprocess_breastcancer.py` we need to set pyensembl cache directory to `./`  under which the downloaded data locate. This is achieved via the line `os.environ['PYENSEMBL_CACHE_DIR'] = './'` in `preprocess_breastcancer.py`
 
 
-> __For easier access__, users can use our preprocessed results uploaded to [output.tar.gz](https://zenodo.org/record/8172197/files/output.tar.gz?download=1)
+> __For easier access__, users can use our preprocessed results uploaded to [output.tar.gz](https://zenodo.org/record/8214466/files/output.tar.gz?download=1)
 
 ## 1. Run Experiments:
 
